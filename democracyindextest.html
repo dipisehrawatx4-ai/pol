@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;title&gt;Democracy Index – Political Compass Test&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: #f5f5f5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.question {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: 0 0 6px rgba(0,0,0,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.options label {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 6px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 30px auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px 35px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.result {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: 0 0 6px rgba(0,0,0,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h1&gt;Democracy Index – Political Compass Test&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;form id="testForm"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">const questions = [</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do elections to the Lok Sabha and State Legislative Assemblies provide genuine competition, with a real possibility of change in government?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Are elections to Panchayats and Municipal bodies generally conducted in a free and fair manner?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"To what extent is universal adult suffrage effectively implemented in practice?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Does Indian law meaningfully protect the freedom of citizens to form political parties?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do electoral laws ensure broadly equal campaigning opportunities?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is political party financing regulated in a transparent manner?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Are constitutional mechanisms for transfer of power clearly respected?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do opposition parties have a realistic chance of forming government?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is access to public office legally open to all eligible citizens?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Are voters able to cast their votes without fear or coercion?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do threats or local power structures significantly affect voting freedom?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Does law protect the formation of civic and political organisations?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do elected representatives effectively control government policy?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is the legislature the supreme political institution?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is there an effective system of checks and balances?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do foreign actors significantly determine India’s policies?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do powerful domestic groups override democratic institutions?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Are there sufficient accountability mechanisms between elections?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is corruption effectively prevented and punished?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do citizens feel real control over political decisions?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is public confidence in government generally high?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Does voter turnout reflect active participation?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do minorities have adequate political representation?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is participation in parties and civil society widespread?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Does law facilitate women’s political representation?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Are citizens actively interested in politics?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Are citizens willing and able to protest lawfully?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Does adult literacy support political participation?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is there sufficient social cohesion for democracy?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do citizens favour strong leaders over parliamentary democracy?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is military rule preferred over civilian rule?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is technocratic rule preferred over elected governance?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is democracy seen as effective for law and order?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is religion institutionally separated from the State?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is electronic and digital media free and independent?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do citizens enjoy freedom of expression and protest?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is media coverage plural and open?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is internet access largely unrestricted?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is freedom of association protected?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Are grievance redressal mechanisms effective?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is custodial violence effectively prevented?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is the judiciary independent?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is religious freedom protected in practice?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is equality before law upheld?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Are property and business rights protected?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Do citizens enjoy personal freedoms?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Are human rights well protected?",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Is national security used sparingly to restrict liberties?"</p>
+<p class="p1">];</p>
+<p class="p2"><br></p>
+<p class="p1">questions.forEach((q, i) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.write(`</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Q${i + 1}. ${q}&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;&lt;input type="radio" name="q${i}" value="5"&gt; Strongly Agree&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;&lt;input type="radio" name="q${i}" value="4"&gt; Agree&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;&lt;input type="radio" name="q${i}" value="3"&gt; Neutral&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;&lt;input type="radio" name="q${i}" value="2"&gt; Disagree&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;&lt;input type="radio" name="q${i}" value="1"&gt; Strongly Disagree&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`);</p>
+<p class="p1">});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;button type="button" onclick="calculateScore()"&gt;Submit Test&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="result" class="result"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">function calculateScore() {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let total = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let sections = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>electoral: { score: 0, max: 60 },<span class="Apple-converted-space">        </span>// Q1–Q12</p>
+<p class="p1"><span class="Apple-converted-space">        </span>government: { score: 0, max: 40 }, <span class="Apple-converted-space">      </span>// Q13–Q20</p>
+<p class="p1"><span class="Apple-converted-space">        </span>participation: { score: 0, max: 40 },<span class="Apple-converted-space">    </span>// Q21–Q28</p>
+<p class="p1"><span class="Apple-converted-space">        </span>culture: { score: 0, max: 30 },<span class="Apple-converted-space">          </span>// Q29–Q34</p>
+<p class="p1"><span class="Apple-converted-space">        </span>liberties: { score: 0, max: 70 }<span class="Apple-converted-space">          </span>// Q35–Q48</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (let i = 0; i &lt; 48; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const selected = document.querySelector(`input[name="q${i}"]:checked`);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!selected) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert("Please answer all questions before submitting.");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const value = parseInt(selected.value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>total += value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (i &lt;= 11) sections.electoral.score += value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if (i &lt;= 19) sections.government.score += value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if (i &lt;= 27) sections.participation.score += value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if (i &lt;= 33) sections.culture.score += value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else sections.liberties.score += value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const finalScore = (total / 24).toFixed(2);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const electoral10 = (sections.electoral.score / sections.electoral.max * 10).toFixed(2);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const government10 = (sections.government.score / sections.government.max * 10).toFixed(2);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const participation10 = (sections.participation.score / sections.participation.max * 10).toFixed(2);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const culture10 = (sections.culture.score / sections.culture.max * 10).toFixed(2);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const liberties10 = (sections.liberties.score / sections.liberties.max * 10).toFixed(2);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("result").innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Your Results&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Overall Democracy Score:&lt;/strong&gt; ${finalScore} / 10&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Raw Score:&lt;/strong&gt; ${total} / 240&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;hr&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Section-wise Scores&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Electoral Process &amp; Pluralism: ${sections.electoral.score} / 60 (${electoral10} / 10)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Functioning of Government: ${sections.government.score} / 40 (${government10} / 10)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Political Participation: ${sections.participation.score} / 40 (${participation10} / 10)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Democratic Political Culture: ${sections.culture.score} / 30 (${culture10} / 10)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Civil Liberties: ${sections.liberties.score} / 70 (${liberties10} / 10)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
